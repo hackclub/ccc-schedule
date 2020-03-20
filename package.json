@@ -1,0 +1,22 @@
+{
+  "name": "@hackclub/ccc-schedule",
+  "version": "0.1.0",
+  "author": "Lachlan Campbell <lachlan@hackclub.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@hackclub/meta": "^0.1.0-alpha.0",
+    "@hackclub/theme": "^0.1.0-alpha.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
+    "next": "^9.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "yarn run dev"
+  }
+}
