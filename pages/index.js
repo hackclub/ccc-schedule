@@ -24,7 +24,7 @@ export default ({ schedule }) => (
       <p>
         By <a href="https://lachlanjc.me">@lachlanjc</a>
         {' & '}
-        <a href="https://github.com/hackclub/ccs-schedule">open source</a> &lt;3
+        <a href="https://github.com/hackclub/ccc-schedule">open source</a> &lt;3
       </p>
     </footer>
     <style jsx global>{`
