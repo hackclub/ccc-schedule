@@ -17,7 +17,10 @@ export default ({ schedule }) => (
     </Head>
     <header>
       <h1>COVID Command Center&nbsp;Schedule</h1>
-      <a href="http://hack.af/ccc-add">Host your own session</a>
+      <div className="buttonGroup">
+        <a href="https://hackclub.com/community" target="_blank">Join the conversation on Slack</a>
+        <a href="http://hack.af/ccc-add" className="accented" target="_blank">Host your own session</a>
+      </div>
     </header>
     <Schedule schedule={schedule} />
     <footer>
@@ -54,6 +57,13 @@ export default ({ schedule }) => (
         padding: ${theme.space[4]}px ${theme.space[3]}px ${theme.space[3]}px;
         text-align: center;
         margin-bottom: ${theme.space[3]}px;
+      }
+      .buttonGroup a {
+        margin: 0 .5em;
+      }
+      .buttonGroup a.accented {
+        color: ${theme.colors.red};
+        background: ${theme.colors.white};
       }
       h1 {
         margin: auto;

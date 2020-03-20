@@ -37,11 +37,28 @@ export default ({ name, leader, dt, time, cal }) => {
         top: theme.space[5] * toSpecialTime(time)
       }}
     >
-      <strong>{name}</strong>
+      <div className="topBar">
+        <strong>{name}</strong>
+        <span className="addToCalendar">+ Add to calendar</span>
+      </div>
       <span>
         {leader} ({time})
       </span>
       <style jsx>{`
+        .topBar {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .addToCalendar {
+          opacity: 0;
+          transition: opacity .2s;
+          text-align: right;
+        }
+        a:hover .addToCalendar {
+          opacity: 1;
+        }
         a {
           border-radius: ${theme.radii.default}px;
           color: ${theme.colors.white};
