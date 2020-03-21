@@ -19,6 +19,7 @@ export default ({ schedule }) => (
       <h1>COVID Command Center&nbsp;Schedule</h1>
       <div className="buttonGroup">
         <a href="https://hackclub.com/community" target="_blank">Join the conversation on Slack</a>
+        <a href="https://partytime.maxwofford.com" target="_blank">Hop on the Zoom call</a>
         <a href="http://hack.af/ccc-add" className="accented" target="_blank">Host your own session</a>
       </div>
       <div className="aboutText">
