@@ -17,21 +17,29 @@ export default ({ schedule }) => (
     </Head>
     <header>
       <h1>COVID Command Center&nbsp;Schedule</h1>
-      <div className="buttonGroup">
-        <a href="https://hackclub.com/community" target="_blank">Join the conversation on Slack</a>
-        <a href="https://partytime.maxwofford.com" target="_blank">Hop on the Zoom call</a>
-        <a href="http://hack.af/ccc-add" className="accented" target="_blank">Host your own session</a>
-      </div>
-      <div className="aboutText">
+      <div className="copy">
         <p>
           The Hack Club community is built on and brought together by the belief
-          that <strong>students are our own best teachers</strong>, and, when left to their own devices,
-          students can teach each other amazing things.
+          that <strong>students are our own best teachers</strong>, and, when
+          left to their own devices, students can teach each other amazing
+          things.
         </p>
         <p>
-          The <strong>COVID Command Center</strong> is an always-running, open-everywhere classroom run by members
-          of the Hack Club community, for the community. Teach something. Learn something.
+          The <strong>COVID Command Center</strong> is an always-running,
+          open-everywhere classroom run by members of the Hack Club community,
+          for the community. Teach&nbsp;something. Learn something.
         </p>
+      </div>
+      <div className="button-group">
+        <a href="https://hackclub.com/community" target="_blank">
+          Join the conversation on Slack
+        </a>
+        <a href="https://partytime.maxwofford.com" target="_blank">
+          Hop on the Zoom call
+        </a>
+        <a href="http://hack.af/ccc-add" className="accented" target="_blank">
+          Host your own session
+        </a>
       </div>
     </header>
     <Schedule schedule={schedule} />
@@ -70,16 +78,16 @@ export default ({ schedule }) => (
         text-align: center;
         margin-bottom: ${theme.space[3]}px;
       }
-      .aboutText {
-        max-width: 32em;
+      .copy {
+        max-width: ${theme.sizes.copy}px;
         margin: 0 auto;
       }
-      .buttonGroup a {
-        margin: .5em;
+      .button-group a {
+        margin: ${theme.space[2]}px;
       }
-      .buttonGroup a.accented {
+      .button-group a.accented {
         color: ${theme.colors.red};
-        background: ${theme.colors.white};
+        background-color: ${theme.colors.white};
       }
       h1 {
         margin: auto;
@@ -87,10 +95,10 @@ export default ({ schedule }) => (
         line-height: 1.125;
         text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
         font-size: ${theme.fontSizes[4]}px;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
       header a {
-        border: 2px solid ${theme.colors.white};
+        border: 2px solid currentColor;
         color: ${theme.colors.white};
         line-height: 1.5;
         padding: ${theme.space[1] * 1.5}px ${theme.space[2] * 1.5}px;
@@ -114,9 +122,12 @@ export default ({ schedule }) => (
           font-size: ${theme.fontSizes[5]}px;
           max-width: none;
         }
+        .copy {
+          font-size: ${theme.fontSizes[2]}px;
+        }
       }
       @media (max-width: ${theme.breakpoints[0]}) {
-        .aboutText {
+        .copy {
           display: none;
         }
       }
