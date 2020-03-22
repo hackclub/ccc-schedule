@@ -99,30 +99,23 @@ export default ({ schedule = [] }) => (
         grid-gap: ${theme.space[3]}px;
         padding: 0 ${theme.space[2]}px ${theme.space[4]}px;
       }
+      @media (min-width: ${theme.breakpoints[2]}) {
+        article {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 0 ${theme.space[3]}px ${theme.space[4]}px;
+        }
+      }
       @media (min-width: ${theme.breakpoints[3]}) {
         article {
           grid-gap: ${theme.space[4]}px;
           grid-template-columns: repeat(3, 1fr);
           padding: 0 ${theme.space[4]}px ${theme.space[5]}px;
-          max-width: ${theme.breakpoints[4]};
+          max-width: ${theme.sizes.wide}px;
           margin-left: auto;
           margin-right: auto;
         }
-      }
-      @media (max-width: ${theme.breakpoints[3]}) {
-        .scheduleBox {
-          width: 65%;
-          max-width: ${theme.breakpoints[3]};
-          min-width: ${theme.breakpoints[1]};
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-      @media (max-width: ${theme.breakpoints[2]}) {
-        .scheduleBox {
-          width: 100%;
-          max-width: unset;
-          min-width: unset;
+        section {
+          max-width: ${theme.sizes.copy}px;
         }
       }
       section {
