@@ -37,28 +37,14 @@ export default ({ name, leader, dt, time, cal }) => {
         top: theme.space[5] * toSpecialTime(time)
       }}
     >
-      <div className="topBar">
+      <div className="top">
         <strong>{name}</strong>
-        <span className="addToCalendar">+ Add to calendar</span>
+        <span className="cta">⨁ Add to calendar</span>
       </div>
       <span>
-        {leader} ({time})
+        {leader} @ {time}
       </span>
       <style jsx>{`
-        .topBar {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .addToCalendar {
-          opacity: 0;
-          transition: opacity .2s;
-          text-align: right;
-        }
-        a:hover .addToCalendar {
-          opacity: 1;
-        }
         a {
           border-radius: ${theme.radii.default}px;
           color: ${theme.colors.white};
@@ -74,22 +60,44 @@ export default ({ name, leader, dt, time, cal }) => {
           font-size: ${theme.fontSizes[1]}px;
           transition: 0.125s ease-in-out transform;
         }
-        @media (min-width: ${theme.breakpoints[2]}) {
-          a {
-            padding: ${theme.space[3]}px;
-          }
-        }
         a:hover,
         a:focus {
           transform: scale(1.0625);
         }
-        strong {
-          display: block;
+        .top {
+          display: flex;
+          flex-direction: column;
           line-height: ${theme.lineHeights.heading};
+        }
+        .top strong {
+          flex: 1 1 auto;
+          width: 100%;
         }
         span {
           display: block;
           color: ${theme.colors.snow};
+        }
+        @media (hover: hover) {
+          .cta {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+          }
+          a:hover .cta,
+          a:focus .cta {
+            opacity: 1;
+          }
+        }
+        @media (min-width: ${theme.breakpoints[2]}) {
+          a {
+            padding: ${theme.space[3]}px;
+          }
+          .top {
+            flex-direction: row;
+            align-items: start;
+          }
+          .cta {
+            text-align: right;
+          }
         }
       `}</style>
     </a>
